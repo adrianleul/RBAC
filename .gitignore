@@ -1,0 +1,15 @@
+# Root ignore for workspace
+
+# Frontend node_modules
+/rbac-frontend-main/node_modules
+
+# Backend (Java/Gradle) build artifacts
+/rbac-backend-main/build
+/rbac-backend-main/.gradle
+/rbac-backend-main/.idea
+/rbac-backend-main/*.iml
+
+# Common build outputs and envs
+dist
+.env
+.DS_Store

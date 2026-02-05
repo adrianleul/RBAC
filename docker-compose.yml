@@ -1,0 +1,54 @@
+version: '3.8'
+services:
+  postgres:
+    image: postgres:16
+    container_name: rbac-postgres-db
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: rbac
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: rbac1234
+    volumes:
+      - postgres_rbac_data:/var/lib/postgresql/data
+
+  redis:
+    image: redis:7
+    container_name: rbac-redis-db
+    ports:
+      - "6379:6379"
+    command: redis-server --requirepass rbac1234
+
+  backend:
+    build:
+      context: ./rbac-backend-main
+      dockerfile: Dockerfile
+    container_name: rbac-backend
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/rbac
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: rbac1234
+      SPRING_REDIS_HOST: redis
+      SPRING_REDIS_PASSWORD: rbac1234
+    depends_on:
+      - postgres
+      - redis
+
+  frontend:
+    build:
+      context: ./rbac-frontend-main
+      dockerfile: Dockerfile
+      args:
+        VITE_API_BASE_URL: /api
+    container_name: rbac-frontend
+    ports:
+      - "3000:80"
+    environment:
+      VITE_API_BASE_URL: /api
+    depends_on:
+      - backend
+
+volumes:
+  postgres_rbac_data:
