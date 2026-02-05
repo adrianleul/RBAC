@@ -125,7 +125,7 @@ When running with Docker, sensitive values should be provided via environment va
 Add or update test commands in respective subproject package/gradle configs if needed.
 
 ## Contributing
-
+docs/images/
 Contributions are welcome. Suggested workflow:
 
 1. Fork the repo and create a feature branch.
@@ -148,6 +148,52 @@ This repo can be deployed using Docker images from the provided Dockerfiles. For
 
 - Backend main entry: `rbac-backend-main/src/main/java/` — Spring Boot app & controllers
 - Frontend main entry: `rbac-frontend-main/src/main.tsx` or `rbac-frontend-main/src/main.jsx`
+
+## Screenshots
+
+All application screenshots are in the `docs/images/` folder. Thumbnails below reference the committed files:
+
+- Login
+
+  ![Login](docs/images/rbac.login.png)
+
+- Dashboard (main)
+
+  ![Dashboard main](docs/images/rbac.dash.png)
+
+- Dashboard (alternate)
+
+  ![Dashboard alt](docs/images/rbac.dash2.png)
+
+- User management
+
+  ![User Management](docs/images/rbac.userma.png)
+
+- Add user
+
+  ![Add User](docs/images/rbac.adduser.png)
+
+- Add role
+
+  ![Add Role](docs/images/rbac.addrole.png)
+
+- Audit log
+
+  ![Audit Log](docs/images/rbac.auditlog.png)
+
+- Cache / Monitoring
+
+  ![Cache](docs/images/rbac.cache.png)
+
+- Server
+
+  ![Server](docs/images/rbac.server.png)
+
+- Profile
+
+  ![Profile](docs/images/rbac.profile.png)
+
+Replace or add images under `docs/images/` and GitHub will render them automatically in this README.
 
 ## License
 
