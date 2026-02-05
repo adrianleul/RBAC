@@ -80,6 +80,13 @@ Notes:
 - Backend default port is typically `8080` (verify in `rbac-backend-main/src/main/resources/application.properties`).
 - Frontend Vite default port is `5173`.
 
+Default credentials (initial):
+
+- Username: `admin`
+- Password: `admin123`
+
+For security, change these credentials immediately after first login or when deploying to production.
+
 ## Docker (Recommended)
 
 To run both services quickly using Docker Compose:
