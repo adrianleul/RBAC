@@ -304,6 +304,14 @@ All application screenshots are in the `docs/images/` folder. Thumbnails below r
 
   ![Add Role](docs/images/rbac.addrole.png)
 
+- Assigning permissions to a role
+
+  ![Assigning permissions to a role](docs/images/assigning permissions to a role.png)
+
+- Permission-based rendering for assigned role
+
+  ![Permission based rendering](docs/images/permission based rendering.png)
+
 - Audit log
 
   ![Audit Log](docs/images/rbac.auditlog.png)
