@@ -320,10 +320,6 @@ All application screenshots are in the `docs/images/` folder. Thumbnails below r
 
   ![Server](docs/images/rbac.server.png)
 
-- Profile
-
-  ![Profile](docs/images/rbac.profile.png)
-
 Replace or add images under `docs/images/` and GitHub will render them automatically in this README.
 
 ## License
