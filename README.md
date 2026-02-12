@@ -1,6 +1,5 @@
 # RBAC (Role-Based Access Control)
-- Thumbnail
-  ![Login](docs/images/rbac-thumbnail.png)
+![Login](docs/images/rbac-thumbnail.png)
 
 Comprehensive Role-Based Access Control (RBAC) reference implementation with a Spring Boot backend and a React + Vite frontend. This repository contains two main projects:
 
